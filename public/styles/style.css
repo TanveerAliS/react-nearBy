@@ -1,0 +1,185 @@
+/******************* Map Canvas *******************/
+#map-canvas {
+    position: relative;
+    height: 100vh;
+    background: #ddd;
+    margin-left: 400px;
+}
+/**********************************************/
+
+/******************* Search Bar ********************/
+.card.search-result-box {
+    position: absolute;
+    width: 400px;
+    top: 0;
+    left: 0;
+    margin: 0px;
+    padding: 10px;
+    height: 100vh;
+}
+
+#input-search {
+    text-transform: capitalize;
+}
+
+/**********************************************/
+
+/******************* Search Results *******************/
+.result-wrapper {
+    overflow-x: hidden;
+    margin-top: 5px;
+    position: relative;
+}
+
+.list-wrapper{
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: translateX(0);
+    transition: transform .5s;
+}
+
+/* Let's get this party started */
+.custom-scroll::-webkit-scrollbar{
+    width: 8px;
+}
+
+/* Track */
+.custom-scroll::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+.custom-scroll::-webkit-scrollbar-thumb{
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(102, 102, 102, 0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.badge {
+    border-radius: 0;
+}
+
+.result-wrapper .badge-primary{
+    background-color: #fc0000;
+}
+
+.favorite{
+    color: #fc0000;
+}
+
+.result-item-title{
+    padding-bottom: 7px;
+    border-bottom: 1px solid #eee;
+}
+
+.result-item-title .heading{
+    width:90%;
+    display: inline-block;
+}
+.search-results{
+    height: 500px;
+}
+
+.show-direction .list-wrapper{
+    transform: translateX(-100%);
+}
+
+.card-block {
+    padding: 0.75rem 1.25rem;
+}
+
+.no-result{
+    padding-top: 12px;
+}
+/**********************************************/
+
+/******************* Direction Card *******************/
+.card.direction {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: translateX(100%);
+    transition: transform .5s;
+    width: 100%;
+    max-height: calc(100vh - 80px);
+}
+
+.show-direction .card.direction {
+    transform: translateX(0);
+}
+
+.steps {
+    padding-left: 0;
+    padding-top: 10px;
+    list-style: none;
+}
+
+.steps li .desc {
+    display: inline-block;
+    width: 80%;
+}
+
+.steps li .distance {
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+}
+
+/******************* Utility *******************/
+body {
+    overflow: hidden;
+}
+
+.load-wrap{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+
+.sort-container {
+    padding: 1rem 0;
+    display: inline-block;
+}
+
+.sort-container button {
+    margin-right: 10px;
+}
+
+.hide{
+    display: none !important;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 4px solid #ccc;
+    border-top-color: #292b2c;
+    animation: spin 1.2s infinite linear;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
