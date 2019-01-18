@@ -1,5 +1,5 @@
 export default {
-    "mapKey": "", // TODO: Add google map API 
+    "mapKey": "AIzaSyA8Ll83AnNtJRkiGKUGjC56VrqZAYUs7Y0", 
     "searchRadius": 50,
     "defaultLocation": {
         lat: 12.978793,
